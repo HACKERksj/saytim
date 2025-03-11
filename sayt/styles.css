@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+body {
+    background: #000;
+    color: white;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: cyan;
+}
+
+.hero {
+    height: 100vh;
+    padding-top: 100px; /* Matnni biroz pastga tushirish */    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    background: url('A_futuristic_business_website_background_featuring.webp') no-repeat center center/cover;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.content {
+    z-index: 2;
+    animation: fadeIn 2s ease-in-out;
+    top: -30px; /* Matn biroz yuqoriroq joylashishi uchun */
+}
+
+h1 {
+    font-size: 35px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white; /* Asosiy rang */
+    text-shadow: none; /* Animatsiyani olib tashlash */
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+/* Faqat hover bo'lganda effekt */
+h1:hover {
+    color: cyan;
+    text-shadow: 0 0 10px cyan, 0 0 20px cyan;
+}
+
+p {
+    font-size: 18px;
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline; /* Chiziq qo'shildi */
+    margin-bottom: 30px; /* Matnni pastga tushirish */
+}
+
+.glow-button {
+    margin-top: 20px;
+    padding: 10px 25px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    background: linear-gradient(90deg, #00f0ff, #0072ff);
+    border-radius: 50px;
+    box-shadow: 0 0 15px cyan;
+    top: 20px; /* Tugmani pastga tushirish */
+    transition: transform 0.3s ease-in-out;
+}
+
+.glow-button:hover {
+    background: linear-gradient(90deg, #0072ff, #00f0ff);
+    box-shadow: 0 0 25px cyan;
+}
+
+/* ANIMATSIYALAR */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h2, p {
+    animation: fadeSlide 1.5s ease-in-out;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8); /* Orqa fon qora */
+    color: white; /* Oq yozuv */
+    padding: 10px 0;
+    font-size: 14px;
+    z-index: 1000; /* Boshqa elementlar to‘sib qo‘ymasligi uchun */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    color: white;
+    text-shadow: none;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.hero h1:hover {
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 10px rgb(254, 250, 114), 0 0 20px rgb(254, 255, 255);
+}
+
